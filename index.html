@@ -18,13 +18,14 @@ img.src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAkACQAAD/4QDeRXhpZgAATU0AKgAA
 const cvs=document.getElementById("c"),ctx=cvs.getContext("2d");
 let W,H,dpr,playerX=0.5,speed=7,roadOffset=0,distance=0,started=false,gameOver=false;
 const racers=[
- {name:"Racer 1",x:.30,color:"#e53935",crop:[185,230,105,120]},
- {name:"Racer 2",x:.43,color:"#7b1fa2",crop:[470,285,90,105]},
- {name:"Racer 3",x:.56,color:"#00897b",crop:[550,300,90,105]},
- {name:"Racer 4",x:.69,color:"#fb8c00",crop:[640,300,90,105]},
- {name:"Racer 5",x:.34,color:"#3949ab",crop:[775,285,100,115]},
- {name:"Racer 6",x:.57,color:"#c62828",crop:[910,300,100,115]},
- {name:"Racer 7",x:.73,color:"#00838f",crop:[1040,285,105,120]}
+ {name:"Sadhu",x:.30,color:"#e53935",crop:[185,230,105,120]},
+ {name:"Penn Hunter",x:.43,color:"#7b1fa2",crop:[470,285,90,105]},
+ {name:"Ataav Roxx",x:.56,color:"#00897b",crop:[550,300,90,105]},
+ {name:"Manjan",x:.69,color:"#fb8c00",crop:[640,300,90,105]},
+ {name:"Donkaaara",x:.34,color:"#3949ab",crop:[775,285,100,115]},
+ {name:"Pilotdktm",x:.57,color:"#c62828",crop:[910,300,100,115]},
+ {name:"Zaaaash",x:.73,color:"#00838f",crop:[1040,285,105,120]}
+]
 ];
 // The blue-shirt/black-cap person (2nd person in the source photo) is intentionally not used.
 let cars=racers.map((r,i)=>({ ...r, y:-100-i*190, baseX:r.x, phase:i*1.7 }));
